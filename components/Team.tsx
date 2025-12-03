@@ -20,12 +20,26 @@ const TeamGroup: React.FC<{ title: string; subtitle?: string; members: TeamMembe
           transition={{ delay: index * 0.1 }}
           className="group relative overflow-hidden rounded-[24px] glass-panel transition-all hover:border-merpara-blue/30"
         >
-          <div className="aspect-[3/4] overflow-hidden bg-gray-900 relative">
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10" />
+          {/* Image Container with Placeholder Fallback */}
+          <div className="aspect-[3/4] overflow-hidden bg-[#1a1a1a] relative">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent z-10" />
+            
+            {/* Fallback pattern if image is missing */}
+            <div className="absolute inset-0 flex items-center justify-center opacity-20">
+               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                 <circle cx="12" cy="7" r="4"></circle>
+               </svg>
+            </div>
+
             <img 
               src={member.image} 
               alt={member.name} 
-              className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+              className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+              onError={(e) => {
+                // Hide broken image icon if not uploaded yet
+                e.currentTarget.style.display = 'none';
+              }}
             />
             
             {/* Overlay Info */}
@@ -38,7 +52,7 @@ const TeamGroup: React.FC<{ title: string; subtitle?: string; members: TeamMembe
             </div>
           </div>
           
-          <div className="p-6 bg-white/5 backdrop-blur-sm">
+          <div className="p-6 bg-white/5 backdrop-blur-sm h-full">
             <p className="text-gray-300 text-sm leading-relaxed">
               {member.description}
             </p>
