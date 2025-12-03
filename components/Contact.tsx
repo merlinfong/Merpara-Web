@@ -12,15 +12,15 @@ const Contact: React.FC = () => {
               Your Fashion Brand Together.
             </p>
             <div className="flex flex-col gap-4">
-              <a href="mailto:merlin@merpara.com" className="flex items-center gap-4 text-white hover:text-gray-300 transition-colors group">
-                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                  <Mail className="w-5 h-5" />
+              <a href="mailto:merlin@merpara.com" className="flex items-center gap-4 text-white hover:text-merpara-blue transition-colors group">
+                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-merpara-blue/20 transition-colors">
+                  <Mail className="w-5 h-5 group-hover:text-merpara-blue" />
                 </div>
                 <span className="text-lg">merlin@merpara.com</span>
               </a>
-              <a href="tel:+8618924681105" className="flex items-center gap-4 text-white hover:text-gray-300 transition-colors group">
-                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                  <Phone className="w-5 h-5" />
+              <a href="tel:+8618924681105" className="flex items-center gap-4 text-white hover:text-merpara-blue transition-colors group">
+                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-merpara-blue/20 transition-colors">
+                  <Phone className="w-5 h-5 group-hover:text-merpara-blue" />
                 </div>
                 <span className="text-lg">+86 18924681105</span>
               </a>
@@ -31,16 +31,16 @@ const Contact: React.FC = () => {
             <div>
               <h4 className="text-white font-bold mb-4 uppercase tracking-widest">Company</h4>
               <ul className="space-y-3">
-                <li><a href="#vision" className="hover:text-white transition-colors">About Us</a></li>
-                <li><a href="#team" className="hover:text-white transition-colors">Careers</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
+                <li><a href="#vision" className="hover:text-merpara-blue transition-colors">About Us</a></li>
+                <li><a href="#team" className="hover:text-merpara-blue transition-colors">Careers</a></li>
+                <li><a href="#" className="hover:text-merpara-blue transition-colors">Privacy Policy</a></li>
               </ul>
             </div>
             <div>
               <h4 className="text-white font-bold mb-4 uppercase tracking-widest">Connect</h4>
               <ul className="space-y-3">
-                <li><a href="#" className="hover:text-white transition-colors flex items-center gap-1">Instagram <ArrowUpRight className="w-3 h-3"/></a></li>
-                <li><a href="#" className="hover:text-white transition-colors flex items-center gap-1">LinkedIn <ArrowUpRight className="w-3 h-3"/></a></li>
+                <li><a href="#" className="hover:text-merpara-blue transition-colors flex items-center gap-1">Instagram <ArrowUpRight className="w-3 h-3"/></a></li>
+                <li><a href="#" className="hover:text-merpara-blue transition-colors flex items-center gap-1">LinkedIn <ArrowUpRight className="w-3 h-3"/></a></li>
               </ul>
             </div>
           </div>

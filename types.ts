@@ -4,6 +4,7 @@ export interface TeamMember {
   description: string;
   image: string;
   flag?: string;
+  group?: 'Strategy' | 'Brand' | 'Studio';
 }
 
 export interface WorkflowStep {

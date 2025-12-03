@@ -20,12 +20,12 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <span className="inline-block py-1 px-3 rounded-full bg-white/10 border border-white/20 text-xs font-medium tracking-wider text-white mb-6 backdrop-blur-md">
+          <span className="inline-block py-1 px-3 rounded-full bg-merpara-blue/10 border border-merpara-blue/30 text-xs font-bold tracking-wider text-merpara-blue mb-6 backdrop-blur-md">
             POWERED BY CHINA'S LEADING SUPPLY CHAIN
           </span>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white leading-[1.1] mb-8">
             Influencer <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-500">
+            <span className="brand-gradient-text">
               Fashion
             </span>
           </h1>
@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center justify-center gap-4">
             <a 
               href="#services"
-              className="px-8 py-4 rounded-full bg-white text-black font-semibold hover:scale-105 transition-transform duration-300 w-full md:w-auto"
+              className="px-8 py-4 rounded-full bg-merpara-blue text-white font-semibold hover:bg-blue-400 hover:scale-105 transition-all duration-300 w-full md:w-auto shadow-[0_0_20px_rgba(47,168,225,0.3)]"
             >
               Start Your Journey
             </a>

@@ -30,14 +30,14 @@ const Services: React.FC = () => {
               className="glass-card p-8 rounded-[32px] h-full flex flex-col relative overflow-hidden group"
             >
                {/* Highlight effect */}
-               <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 blur-[80px] rounded-full -mr-32 -mt-32 pointer-events-none group-hover:bg-white/10 transition-colors" />
+               <div className="absolute top-0 right-0 w-64 h-64 bg-merpara-blue/10 blur-[80px] rounded-full -mr-32 -mt-32 pointer-events-none group-hover:bg-merpara-blue/20 transition-colors" />
 
               <div className="mb-8 relative z-10">
-                <span className="text-xs font-bold tracking-widest text-gray-500 uppercase mb-3 block">
+                <span className="text-xs font-bold tracking-widest text-merpara-blue uppercase mb-3 block">
                   {pkg.recommendedFor}
                 </span>
                 <h3 className="text-3xl font-serif text-white mb-3">{pkg.name}</h3>
-                <p className="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 font-light">{pkg.price}</p>
+                <p className="text-2xl brand-gradient-text font-light">{pkg.price}</p>
               </div>
 
               <p className="text-gray-400 text-sm mb-8 leading-relaxed min-h-[60px] relative z-10">
@@ -47,8 +47,8 @@ const Services: React.FC = () => {
               <div className="space-y-4 mb-10 flex-grow relative z-10">
                 {pkg.features.map((feature, idx) => (
                   <div key={idx} className="flex items-start gap-3">
-                    <div className="mt-1 w-4 h-4 rounded-full bg-white/10 border border-white/20 flex items-center justify-center flex-shrink-0">
-                      <Check className="w-2.5 h-2.5 text-white" />
+                    <div className="mt-1 w-4 h-4 rounded-full bg-merpara-blue/20 border border-merpara-blue/50 flex items-center justify-center flex-shrink-0">
+                      <Check className="w-2.5 h-2.5 text-merpara-blue" />
                     </div>
                     <span className="text-gray-300 text-sm">{feature}</span>
                   </div>
@@ -57,7 +57,7 @@ const Services: React.FC = () => {
 
               <button
                 onClick={() => handleSelect(pkg.name)}
-                className="w-full py-4 rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] flex items-center justify-center gap-2 group relative z-10"
+                className="w-full py-4 rounded-full bg-merpara-blue text-white font-semibold hover:bg-blue-400 transition-all shadow-[0_0_20px_rgba(47,168,225,0.15)] hover:shadow-[0_0_30px_rgba(47,168,225,0.3)] flex items-center justify-center gap-2 group relative z-10"
               >
                 Start Now
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -93,7 +93,7 @@ const Services: React.FC = () => {
               </button>
 
               <div className="mb-8">
-                <span className="text-xs font-bold text-gray-500 uppercase tracking-widest">Selected Plan</span>
+                <span className="text-xs font-bold text-merpara-blue uppercase tracking-widest">Selected Plan</span>
                 <h3 className="text-3xl font-serif text-white mt-1">{selectedPlan}</h3>
                 <p className="text-gray-400 text-sm mt-2">Complete your profile to initiate your brand journey.</p>
               </div>
@@ -126,7 +126,7 @@ const Services: React.FC = () => {
                 </div>
 
                 <div className="pt-4">
-                  <button className="w-full py-4 rounded-full bg-white text-black font-bold text-sm hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+                  <button className="w-full py-4 rounded-full bg-merpara-blue text-white font-bold text-sm hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 shadow-[0_4px_14px_0_rgba(47,168,225,0.39)]">
                     <Lock className="w-3 h-3" />
                     Secure Your Spot
                   </button>

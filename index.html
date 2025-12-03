@@ -19,7 +19,13 @@
             colors: {
               glass: "rgba(255, 255, 255, 0.03)",
               glassBorder: "rgba(255, 255, 255, 0.08)",
-              accent: "#FF4D4D", 
+              merpara: {
+                blue: "#2FA8E1",    /* Bright Cerulean from Logo */
+                red: "#FF6B6B",     /* Salmon Red from Dot */
+                orange: "#F2C94C",  /* From Palette */
+                purple: "#9B51E0",  /* From Palette */
+                black: "#1D1D1F",   /* Apple Dark */
+              }
             },
             animation: {
               'float': 'float 8s ease-in-out infinite',
@@ -46,7 +52,7 @@
 
       /* Brand color selection style */
       ::selection {
-        background-color: #FF4D4D;
+        background-color: #2FA8E1; /* Merpara Blue */
         color: white;
       }
       
@@ -69,7 +75,7 @@
 
       .glass-card:hover {
         background: linear-gradient(180deg, rgba(255,255,255,0.09) 0%, rgba(255,255,255,0.03) 100%);
-        border-color: rgba(255, 255, 255, 0.2);
+        border-color: rgba(47, 168, 225, 0.3); /* Blue hint on hover */
         transform: translateY(-4px);
         box-shadow: 0 20px 40px -4px rgba(0, 0, 0, 0.4);
       }
@@ -82,13 +88,19 @@
         transition: all 0.3s ease;
       }
       .glass-input:focus {
-        background: rgba(255, 255, 255, 0.08);
-        border-color: rgba(255, 255, 255, 0.3);
+        background: rgba(47, 168, 225, 0.1);
+        border-color: #2FA8E1;
         outline: none;
       }
 
       .text-gradient {
         background: linear-gradient(135deg, #fff 0%, #a1a1aa 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      
+      .brand-gradient-text {
+        background: linear-gradient(135deg, #2FA8E1 0%, #9B51E0 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
@@ -105,7 +117,7 @@
         border-radius: 3px;
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: #555; 
+        background: #2FA8E1; 
       }
     </style>
   <script type="importmap">

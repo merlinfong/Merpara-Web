@@ -16,19 +16,22 @@ const Vision: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             {
-              icon: <Globe className="w-8 h-8 text-white" />,
+              icon: <Globe className="w-8 h-8 text-merpara-blue" />,
               title: "Cross-Border Expertise",
-              text: "Over 10 years of experience ensuring a smooth collaboration between Western Influencers and Chinese manufacturing."
+              text: "Over 10 years of experience ensuring a smooth collaboration between Western Influencers and Chinese manufacturing.",
+              color: "border-merpara-blue/20"
             },
             {
-              icon: <Users className="w-8 h-8 text-white" />,
+              icon: <Users className="w-8 h-8 text-merpara-orange" />,
               title: "Global Presence",
-              text: "Teams across China, the US, and Latin America providing localized support to help you navigate international markets."
+              text: "Teams across China, the US, and Latin America providing localized support to help you navigate international markets.",
+              color: "border-merpara-orange/20"
             },
             {
-              icon: <TrendingUp className="w-8 h-8 text-white" />,
+              icon: <TrendingUp className="w-8 h-8 text-merpara-red" />,
               title: "ROI-Driven Approach",
-              text: "Combining strategic planning with operational efficiency to maximize your brand's growth and profitability."
+              text: "Combining strategic planning with operational efficiency to maximize your brand's growth and profitability.",
+              color: "border-merpara-red/20"
             }
           ].map((item, index) => (
             <motion.div
@@ -37,10 +40,10 @@ const Vision: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
-              className="glass-card p-8 rounded-3xl relative overflow-hidden group hover:border-white/30 transition-all duration-500"
+              className={`glass-card p-8 rounded-3xl relative overflow-hidden group hover:border-white/30 transition-all duration-500`}
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-3xl -mr-10 -mt-10 group-hover:bg-white/10 transition-all"></div>
-              <div className="mb-6 p-3 bg-white/5 w-fit rounded-2xl border border-white/10">
+              <div className={`mb-6 p-3 bg-white/5 w-fit rounded-2xl border ${item.color}`}>
                 {item.icon}
               </div>
               <h3 className="text-xl font-bold text-white mb-4">{item.title}</h3>
