@@ -43,6 +43,12 @@
         /* Subtle noise texture for premium feel */
         background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
       }
+
+      /* Brand color selection style */
+      ::selection {
+        background-color: #FF4D4D;
+        color: white;
+      }
       
       .glass-panel {
         background: rgba(20, 20, 20, 0.75);
@@ -115,6 +121,13 @@
 </script>
 </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Loading State for slower connections -->
+      <div style="height: 100vh; display: flex; align-items: center; justify-content: center; font-family: sans-serif; letter-spacing: 0.2em; font-size: 0.75rem; color: rgba(255,255,255,0.4);">
+        LOADING MERPARA...
+      </div>
+    </div>
+    <!-- CRITICAL: This script tag connects the HTML to your React code -->
+    <script type="module" src="./index.tsx"></script>
   </body>
 </html>
